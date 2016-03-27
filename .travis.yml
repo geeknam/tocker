@@ -3,6 +3,6 @@ cache: pip
 python:
   - "2.7"
 install:
-  - pip install nose mock
+  - pip install nose mock docker-py
 script: nosetests --nologcapture --cover-package=tocker
 
