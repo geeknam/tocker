@@ -1,8 +1,13 @@
+sudo: required
+services:
+  - docker
 language: python
 cache: pip
 python:
   - "2.7"
 install:
-  - pip install nose mock docker-py
-script: nosetests --nologcapture --cover-package=tocker
+  - pip install nose mock docker-py testinfra
+script:
+  - nosetests --nologcapture --cover-package=tocker
+  - cd examples/nginx && testinfra test.py -v
 
