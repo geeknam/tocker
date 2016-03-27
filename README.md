@@ -1,5 +1,6 @@
 tocker: TDD for writing Dockerfile
 -----------------------------------
+[![Build Status](https://travis-ci.org/geeknam/tocker.svg?branch=master)](https://travis-ci.org/geeknam/tocker)
 
 ## About
 
