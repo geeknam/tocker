@@ -14,6 +14,7 @@ setup(
     description='TDD for Docker',
     keywords='docker tdd testing test container',
     install_requires=dependencies,
+    test_suite='tocker.test',
     entry_points={
         'pytest11': [
             'tocker = tocker.fixtures',

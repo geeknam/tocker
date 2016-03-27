@@ -6,9 +6,23 @@ tocker: TDD for writing Dockerfile
 `tocker` is a plugin for [testinfra](https://github.com/philpep/testinfra/) that allows developers to test `docker` images
 
 
-## Installation
+## Getting Started
 
     pip install tocker
+
+Set your environment variables to connect to docker engine:
+
+    export DOCKER_HOST=unix:///var/run/docker.sock
+
+If docker engine runs a different host, set the following:
+
+    export DOCKER_TLS_VERIFY=1
+    export DOCKER_HOST=tcp://ip:port
+    export DOCKER_CERT_PATH=/path/to/certs
+
+If you're using `docker-machine`, you can simply run:
+
+    eval $(docker-machine env myenv)
 
 
 ## Workflow
