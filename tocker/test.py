@@ -36,7 +36,7 @@ class TockerTestCase(TestCase):
 
         builder = Builder(tag='myimage')
         self.assertEqual(
-            builder._client.base_url, 'https://192.168.99.100:2376'
+            builder._client.base_url, 'http://192.168.99.100:2376'
         )
         self.assertEqual(builder._client._version, '1.10')
 
