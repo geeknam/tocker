@@ -9,7 +9,8 @@ before_install:
   - apt-cache madison docker-engine
   - sudo apt-get -o Dpkg::Options::="--force-confnew" install -y docker-engine=1.10.2-0~trusty
 install:
-  - pip install nose mock docker-py testinfra pytest
+  - pip install nose mock docker-py testinfra
+  - pip install -U pytest==2.9.1
   - python setup.py install
 script:
   - nosetests --nologcapture --cover-package=tocker
