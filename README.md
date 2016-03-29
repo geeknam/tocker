@@ -6,6 +6,8 @@ tocker: TDD for writing Dockerfile
 
 `tocker` is a plugin for [testinfra](https://github.com/philpep/testinfra/) that allows developers to test `docker` images
 
+[![asciicast](https://asciinema.org/a/enpmvy2q7whhpxov5mvpci6mw.png)](https://asciinema.org/a/enpmvy2q7whhpxov5mvpci6mw?autoplay=1)
+
 
 ## Getting Started
 
