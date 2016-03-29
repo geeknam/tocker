@@ -22,7 +22,7 @@ def docker(request, LocalCommand):
 
     # Run a new container
     docker_id = LocalCommand.check_output(
-        "docker run -d %s tail -f /dev/null" % tag
+        "docker run -d %s" % tag
     )
     print('Running container: %s' % docker_id)
 
