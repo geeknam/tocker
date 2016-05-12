@@ -1,6 +1,4 @@
-
-
-IMAGE_TAG = 'nginx:1.9.12'
+IMAGE_TAG = 'mynginx:latest'
 
 
 def test_apt_sources(docker):
@@ -34,4 +32,3 @@ def test_nginx_service(docker):
         user='nginx', comm="nginx"
     )
     assert len(nginx_processes) == 1
-

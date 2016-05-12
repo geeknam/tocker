@@ -1,4 +1,8 @@
 import docker as dockerpy
+import logging
+import json
+
+log = logging.getLogger(__name__)
 
 
 class Stream(object):
@@ -30,11 +34,12 @@ class Builder(object):
         print('\nBuilding image: %s' % self.tag)
         for line in self._client.build(
             path='.', rm=True, forcerm=True,
-            decode=True, tag=self.tag
+            tag=self.tag
         ):
             try:
-                print line['stream']
-            except KeyError:
+                parsed = json.loads(line.strip())
+                print(parsed['stream'].strip())
+            except Exception as e:
                 print line
             self.result.append(line)
         return self.tag

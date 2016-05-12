@@ -20,10 +20,16 @@ def docker(request, LocalCommand):
             'Dockerfile failed to build: %s' % builder.error
         )
 
+    try:
+        run_args = request.module.RUN_ARGS
+    except AttributeError:
+        run_args = {}
+
     # Run a new container
-    docker_id = LocalCommand.check_output(
-        "docker run -d %s" % tag
-    )
+    args = ' '.join(['%s %s' % (k, v) for k, v in run_args.items()])
+    docker_command = "docker run -d %s %s" % (args, tag)
+    docker_id = LocalCommand.check_output(docker_command)
+    print('Executing: "%s"' % docker_command)
     print('Running container: %s' % docker_id)
 
     def teardown():
