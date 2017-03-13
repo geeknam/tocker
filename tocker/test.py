@@ -49,10 +49,6 @@ class TockerTestCase(TestCase):
         builder = Builder(tag='myimage')
         builder.build()
         mock_build.assert_called_with(
-            decode=True, forcerm=True,
-            path='.', rm=True, tag='myimage'
+            path='.', rm=True, forcerm=True,
+            tag='myimage'
         )
-
-
-
-

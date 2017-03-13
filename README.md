@@ -53,4 +53,3 @@ If you're using `docker-machine`, you can simply run:
 If you're looking to add a new module, please contribute to [testinfra](https://github.com/philpep/testinfra/).
 
 If it's more specific to `Docker`, you can add additional fixtures under `tocker/fixtures.py`. Pull requests are welcome.
-
