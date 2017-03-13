@@ -6,7 +6,7 @@ dependencies = [
 
 setup(
     name='tocker',
-    version='0.1',
+    version='0.2',
     packages=['tocker'],
     license='The MIT License (MIT)',
     author='Nam Ngo',
